@@ -14,6 +14,10 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Arvostelu",
+            dependencies: ["ArvosteluCore"]
+        ),
+        .target(
             name: "ArvosteluCore",
             dependencies: []),
         .testTarget(
