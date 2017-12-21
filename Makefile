@@ -32,4 +32,4 @@ build-container: clean-container build-release
 
 	docker build -t $(CONTAINER_URL) .
 
-.PHONY: build test run
+.PHONY: clean build test run

@@ -34,7 +34,7 @@ build-app:
   image: ibmcom/swift-ubuntu:4.0
   stage: build
   script:
-    - echo "Building release artifact for Naamio"
+    - echo "Building release artifact for $CI_PROJECT_NAME"
     - swift build -c release -Xcc -fblocks -Xlinker -L/usr/local/lib 
   artifacts:
     paths:
@@ -50,7 +50,7 @@ review-app:
   image: ibmcom/swift-ubuntu:4.0
   stage: test
   script:
-    - echo "Reviewing Naamio service" 
+    - echo "Reviewing $CI_PROJECT_NAME service" 
     - make build
     - make test
   only:
@@ -62,7 +62,7 @@ test-app:
   image: ibmcom/swift-ubuntu:latest
   stage: test
   script:
-    - echo "Testing Naamio service"
+    - echo "Testing $CI_PROJECT_NAME"
     - make test
   tags:
     - docker
