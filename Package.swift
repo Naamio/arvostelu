@@ -5,6 +5,10 @@ import PackageDescription
 let package = Package(
     name: "Arvostelu",
     products: [
+        .executable(
+            name: "Arvostelu",
+            targets: ["Arvostelu"]
+        ),
         .library(
             name: "ArvosteluCore",
             targets: ["ArvosteluCore"]),
